@@ -3,7 +3,7 @@ class Recipiente:
     limpo = True
 
     def __init__(self,tamanho):
-        if tamanho >= 0:
+        if tamanho > 0:
             self.tamanho = tamanho
         else: 
             self.tamanho = 0
@@ -31,7 +31,3 @@ class Recipiente:
 
     def __str__(self):
         return f"Um recipiente {self.estado()} não especificado"
-
-copo = Recipiente(500)
-copo.sujar()
-print(copo)
