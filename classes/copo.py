@@ -7,7 +7,7 @@ class Copo(Recipiente):
         super().__init__(tamanho)
 
     def encher(self,bebida = 'água'):
-        if not self.esta_limpo :
+        if not self.esta_limpo() :
             return "Não se pode encher um copo sujo"
 
         self.conteudo += self.tamanho
@@ -32,14 +32,14 @@ class Copo(Recipiente):
     def __repr__(self):
         if not self.conteudo:
 
-            return f"Um copo vazio de {self.tamanho}ml"
+            return f"Um copo vazio de {self.tamanho:.1f}ml"
 
-        return f"Um copo de {self.tamanho}ml contendo {self.conteudo}ml de {self.bebida}"
+        return f"Um copo de {self.tamanho:.1f}ml contendo {self.conteudo:.1f}ml de {self.bebida}"
 
     def __str__(self):
         if not self.conteudo:
 
-            return f"Um copo vazio de {self.tamanho}ml"
+            return f"Um copo vazio de {self.tamanho:.1f}ml"
 
-        return f"Um copo de {self.tamanho}ml contendo {self.conteudo}ml de {self.bebida}"
+        return f"Um copo de {self.tamanho:.1f}ml contendo {self.conteudo:.1f}ml de {self.bebida}"
 

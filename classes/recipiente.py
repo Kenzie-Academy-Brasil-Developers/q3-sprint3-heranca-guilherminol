@@ -16,6 +16,7 @@ class Recipiente:
 
     def lavar(self):
         self.limpo = True
+        self.esvaziar()
 
     def esta_limpo(self):
         return self.limpo == True
